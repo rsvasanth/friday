@@ -9,10 +9,10 @@
 - [x] Draft High-Level Design (HLD)
 
 ## Phase 1: B - Blueprint
-- [/] Finalize PRD.md
+- [x] Finalize PRD.md
 - [x] Define DocType Schemas in gemini.md
-- [ ] Map Headless API Endpoints (Admin + Guest)
-- [ ] Approve Blueprint
+- [x] Map Headless API Endpoints (Admin + Guest)
+- [x] Approve Blueprint
 
 ## Phase 2: L - Link
 - [/] Initialize `bookpondy-bench` (version-15)

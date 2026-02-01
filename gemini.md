@@ -97,3 +97,22 @@ You are the **Enterprise System Pilot**. You build high-scale, deterministic Fra
 1. **Security First**: Never hardcode CSRF tokens; always use `window.frappe.boot.csrf_token`.
 2. **Schema Integrity**: Any change to a DocType must be mirrored in `gemini.md` first.
 3. **Tool Atomicity**: Python API methods should be modular and return standard JSON responses.
+
+---
+
+## 🔗 API Mapping (Headless)
+
+### 1. Guest API (`/api/method/bookpondy.api.guest.`)
+- `get_itinerary`: Fetch bespoke itinerary narrative + items (Stay, Experience, Mobility).
+- `update_itinerary_request`: Guest requested modifications (Subject to Ops Approval).
+- `get_available_slots`: Check real-time availability for experiences/workshops.
+
+### 2. Partner/Storyteller API (`/api/method/bookpondy.api.partner.`)
+- `get_assigned_experiences`: List of assigned "storytelling" sessions.
+- `mark_experience_status`: Start/Complete session (Update `reference_doc` status).
+- `get_earnings_report`: Real-time view of direct revenue impact.
+
+### 3. Core/Operations API (`/api/method/bookpondy.api.ops.`)
+- `approve_itinerary_change`: Ops verification for post-deposit modifications.
+- `sync_channel_inventory`: Trigger manual sync with Channel Manager.
+- `audit_impact_fund`: Compute and verify Restoration Fund totals.
